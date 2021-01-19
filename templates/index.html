@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KU Registration Form</title>
+</head>
+<style>
+    
+
+    h1 {
+  color:chocolate;
+  font-family: verdana;
+  font-size: 150%;
+}
+    /* body{
+
+        background-color: white;
+    } */
+    input[type=text] {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type=email] {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+    .form-group {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  
+}
+    button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   height: 80px;
+
+   width: 100%;
+   background-color:blueviolet;
+   color: white;
+   text-align: center;
+   padding-bottom: 5px;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 32%;
+  padding: 0px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<body>
+    
+    
+    <h1 >Welcome to KU-IRDP/NTIC Registration Form</h1>
+    <br>
+    <div class ="form-group">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            
+            <button type="submit">Submit </button>
+    
+    </form>
+
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="/static/Capture_ntic_2.png"  style="width:123px ;height: 123px;">
+          </div>
+        <div class="column">
+          <img src="/static/Capture_koica.png"  style="width:123px ;height: 123px;">
+        </div>
+        
+        <div class="column">
+          <img src="/static/Kathmandu_University_Logo.png"  style="width:102px ;height: 110px;">
+        </div>
+      </div>
+
+
+  
+  
+   
+    <div class="footer">
+        <p style="font-size: 22;">Contact Us</p>
+        <p >Email: irdp@ku.edu.np</p>
+      </div>
+
+    
+</body>
+</html>
